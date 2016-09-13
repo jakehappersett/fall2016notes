@@ -1,0 +1,45 @@
+Database Design Process
+
+- store manage use data
+- data is raw 
+	information is analyzed data 
+	knowledge is a combination of information context and experience
+- dangers of decentrallized data management
+	redundancy
+	inconsistecny
+	incompatibility
+		different formats differnet constraints different models of the data
+	inaccuracy
+	lack of security
+	lack o faccountability
+	flexibility
+- data should be:
+	integrated
+	shared
+		different users and different levels of access to data 
+- DBMS (database management system) a software system must provide facilities for:
+	defining and constructing the database
+	efficeint access to the common 
+	manipulation
+	supporting multiple views 
+	maximizing the reliability and availability of the data
+	definition and enforcemtn of contraints in single and multi user environments
+	preventing unauthorized access to the data 
+	reduce the need for application software maintenance by supporting a high level of independence 
+	provide high level tools to simplify the development of application software
+
+- Schema design 
+	Describes the structure of the databse ( the objects that are represented in the database and the relationships among them) and teh type of content that each data element within the structure can contain 
+	also called the Intension of the database
+- Instance 
+	the collection of data stored int he database at a particular time
+	also called the extension of the database
+- Logical Data Independence
+	applications are insulated from changes in logical structure of the data
+- physical data independence
+	applications are insulated from changes in pphysical structure of the data 
+- Concurrency control
+	in a multiuser environment concurrent execution of the user programs is essential for good DBMS performance
+	interleaving actions of different user programs can lead to inconsistency ( eg check is cleared while account balance is being computed ) 
+	DBMS ensures such problems dont arise: users can pretend they are using a single user system
+- 

@@ -1,0 +1,37 @@
+Entity-relationship data model
+
+- entity: a distint object about which an organization chooses to record data 
+	must have descriptive information other than its identifier 
+	noun
+- relationship: an association between two or more entities
+	verb
+- attribute is a property or characteristic of an entity or relationship about which the organization chooses to record data 
+	noun
+
+- each entity type must participate in at least one relationship type
+- each attribute must be connected to an entity type or a relationship type
+- each relationship type must be connected to either at least  entity types or to one entity type twice 
+memorize the rest of these!
+memorize erd:chen style slide
+
+
+- connectivity
+	used in the relationship classification
+		1:1
+		1:m
+		m:n
+- cardinality 
+	expresses the specific number of entity occurences associated with one occurence of the related entity
+		optional : one entity occurence does not require a correspending entity occurence in a particular relationship
+		mandatory: required
+	represented with xy with min in x and max in y 
+	the DBMS cant handle cardinality on the table level 
+
+
+- crow foot style, see chart for cardinality relationships
+
+-three degrees of relatoinships
+	unary : entity has a relationship wiht itself
+	binary : two entity
+	ternary : three entity 
+

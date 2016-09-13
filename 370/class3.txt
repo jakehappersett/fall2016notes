@@ -1,0 +1,9 @@
+- VPN : virtual privat network
+	encrypts session
+	masks ip (replaces)
+- service v. protocol
+
+	SERVICE : operations that a layer is prepared to preform on behalf of users (not how it actually is used)
+	PROTOCOL: rules that govern how a service is being implemented
+
+

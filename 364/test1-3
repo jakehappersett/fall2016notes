@@ -1,0 +1,23 @@
+**Generalization** 
+
+- supertype 
+	class that subtypes inherit from 
+	all subtypes inherit relationships and attributes from supertypes
+
+- specialization is the opposite of generalization
+
+- symbols under the superclass denote how classes can inherit from superclass
+	o : superclass can have more than one subtypes 
+	d : superclass can have only one subtype
+
+- completeness:	
+	double line : total : mandatory - superclass has to inherit a subclass 
+	single line : partial : optional - opposite 
+
+- category
+	similar to specialization and generalization but uses a "u" symbol instead of "d" or "o"
+	
+- ERM issues 
+	ER diagrams help you understand design
+	databases are always written with tables however
+			

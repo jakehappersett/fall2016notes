@@ -1,0 +1,34 @@
+Packet structure
+
+- packet switching vs circuit switching 
+	packet switching was originially set up to handle data
+	circuit --> voice
+	packet switching morphed to be able to handle voice and video 
+	packet switching excells at "burst" data transfer (about 100x more efficeint than circuit switching)*****
+- advanteages of packetization
+	communication link costs are high relative to switching cost
+		ex highways are more expeensive than automobiles
+		efficieint utilization of communication links is more important than conserving ocmputation effort
+- protocol
+	provide information to recieveing station so changes can be made along the way
+	rules to make exchange:
+	1 define how the data is to be packaged or formatted
+	2 what is the language (html or smtp etc etc etc)
+	3 speed - controlling speed of the exchange 
+	4 timing - when to exchange
+- layering
+	arranging funtionality in a hierarchical manner such that lower layers provide funtions and services that support the functions and services of higer layers 
+	****allows for innovation and standards***
+	advantages:
+		seperation of functionality
+			simplification of upgrades
+		simplification in adding new technology
+			ex: adding wireless network capability doesn not require change in we site addresses
+- data is sent as packets
+	packetization requires:
+		1 specifiying user commands : user commands 
+		2 segmentation and reassembly of packets : sequence numbers
+		3 indentifying and locating packet destination : address (IP and MAC address)
+		4 error control and correction (what) : error check 
+		5 signaling ( how are the bits being represented electrically) : none
+	much of this informatoin is includeded in the data (called a frame)

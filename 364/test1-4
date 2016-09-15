@@ -1,0 +1,49 @@
+**tables**
+
+-relational model (real databases)
+	named collection of attributes
+	two dimensional table WITHOUT duplicate rows 
+	show primary and foreign keys
+	when converting ER diagrams to relational models delete relations, each entity is a table
+
+	row represents the actual occurence of a particular entity or relationship instance 
+		> also called tuple 
+		> order is not important
+
+	column for each attribute 
+		> requires primary key
+		> order is not important
+
+- candidate key
+	a set of attributes of a relation for which the following three properties hold
+		> uniqueness : the set of attributes take on a unique value for each tuple in teh rlation
+		> non redundancy : if an attribute is removed from the set of attributes the remaining attributes doe not possess the uniqueness property
+		> validity : no attribute value in the key may be null
+	superkey : least redudant candidate key
+	
+
+- null value
+	no data entered
+	0 
+	
+- prime attribute
+	an attribute that is part of at least one candidate key
+- nonprime attribute
+	an attribute that is not part of any candidate key
+
+- integrity constraints
+	
+	entity integrity : no attribute that is part of a primary key (PK) can have a null value
+
+	referential integrity : every foreign key value MUST match a primary key vlaue in an associated relation or be null
+
+- representations : 
+
+	one to many : place the primary key attribute of the entity type on the "one" side of the relationship as a foreign key in the "many" side of the relationship 
+
+	many to many : create a "linking table"
+		1 create a table for each entity
+		2 create a linking table
+			> include a primary key from each of the "many" sides as a foreign key
+			> the combination of the two foreign key's is the linking table's primary key
+

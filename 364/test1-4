@@ -47,3 +47,4 @@
 			> include a primary key from each of the "many" sides as a foreign key
 			> the combination of the two foreign key's is the linking table's primary key
 
+	weak entity : primary key of main entity becomes primary key for weak entity

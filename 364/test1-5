@@ -1,0 +1,14 @@
+- specialization hierarchy with [d]isjoint subtypes 
+	for each subtype the correspondign relationship includes 
+		> the PK of its supertype
+		> the attributes of the subtype
+	the relation for the supertype includes 
+		> the attributes of the supertype 
+		> a subtype discriminator column that indicates which subtype applies to given row fo the supertpes relation
+
+- specialization hierarchy with [o]verlapping subtypes 
+	for subtype
+		> same as disjoint
+	for supertype
+		> same as disjoint
+		> discriminator column can be binar

@@ -1,0 +1,41 @@
+- multiplexing v. channel access
+	multiplexers are layer 1 devices
+	channel access method or multiple access method occurs at layer 2 
+		> used a nic card
+			does manchester encoding
+			implements a way to multiplex within a single local area network 
+			mac address
+- cables 
+
+	crossover cable: wire connected to pin1 on one side will no longer be connected to pin one on the otherside. four wires will cross over in a crossover cable 1,2,3,6 are croseed to 3,6,1,2
+		> used to connect like devices such as PC to PC
+
+	straight through cable: pin 1:1 2:2 3:3 etc
+
+	rollover cable: all 8 wires are rolled over to another pin at the other end of the cable.  1:8 2:7 3:6 etc etc.
+		> this is a cisco specific cable 
+		> used to service routers 
+
+- pulse code modulation 
+	
+	quantization: converting analog signal into a number (binary)  
+		> voice --> codec ; analog --> digital
+
+- network topologies 
+	
+	point to point and mesh are most common
+	
+	bus connection : ethernet connection 
+
+- IEEE 802.3 medium notatoin == ethernet 
+	
+	standard notaion is
+		<data rate in Mbps><signaling method> maximum segment length in hudnreds of meters><T for twister pair><F for fiber> 
+** look at 802.3 media options in powerpoint ** 
+
+- MAC address : a unique identifier assigned to each NIC for communications at the physical layer
+	
+	a six byte address written in the NIC card in hexadecimal
+		> first 3 bytes are the organizationally unique identifier and the next 3 bytes are NIC specific
+	
+	read by layer 2 switches

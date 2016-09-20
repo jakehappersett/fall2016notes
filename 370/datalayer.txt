@@ -1,5 +1,0 @@
-- multiplexing v. channel access
-	multiplexers are layer 1 devices
-	channel access method or multiple access method occurs at layer 2 
-		> used a nic card
-

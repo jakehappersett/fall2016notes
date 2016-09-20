@@ -126,5 +126,4 @@
 	number of bits that are conveyted per unit of time
 - channel capacity 
 	upperbound on the amoun of data tha can be reliably transmitted over a communications channel
-
 	

@@ -1,0 +1,54 @@
+** data link layer ** 
+(for now talking specifically focused on ethernet)
+
+- functions of the data link layer
+	encapsulate packets into frames and MAC addressing(switches) [MAC host addressing (switching)]
+	detec and discard errors that may occur in the physical layer [error detection]
+
+- hop : identifies the number of switches or routers encoutntered, each switch or router constittes a hop!
+	in packet switching a packet contains a hop count which increments with each hop. 
+		> a packet iwth too large a hop count is discarded 
+
+- switch vs. hub
+	hub : a device capable of only broadcasting
+
+	switch: device capable of unicasting, multi-casting, and broadcasting	
+		> stops broadcasting when it is picked up and starts unicasting
+		> almost used exclusively now instead of hubs
+- PDU : protocol data unit
+
+	layer 1: PDU is the bit
+	layer 2: PDU is the frame
+	layer 3: PDU is the packet
+	layer 4: PDU is the segment
+	layer 5 and above: PDU is DATA
+
+- Ethernet
+	low cost, high speed 
+ 	****can be 100 meters in radius and support about 250 devices***** (per segment) 
+
+- LAN Ethernet protocol architecture
+	consists of two sublayers
+		1 medium access control MAC - physical
+		2 logical link control LLC - logical
+
+- logical link control
+	allows support of multiplexing via service access points
+	allows flow control through automatic repeat request (ARQ)
+
+- connection vs connectionless service
+	connectionless : like sending mail through the postal system.  
+		> data is sent and we hope it arrives at its destination 
+		> no feedack from the destination to indicate wheter it arrived or not
+		> (tech equivalent is email)
+	connection: like a phone conversation
+		> connection is established by dialing an number
+		> someone picking up the line establishes connection
+		> connection is confirmed between the two parties
+		> acknolwledgment is called an ACK
+		> repeat is called a ARR (automatic repeat request)
+- LLC sublayer
+	max size is 1500 octets/bytes
+	controls how things are logically put together
+		> tells the NIC card where to buffer information it gets
+

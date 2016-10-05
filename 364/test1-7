@@ -1,0 +1,11 @@
+relational division: 
+
+if a / b 
+
+take all the values of a that are linked to the value of b 
+
+if a / bc 
+
+take all of the values of a that are linked to b && linked to c 
+
+

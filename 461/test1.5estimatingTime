@@ -1,0 +1,11 @@
+a = optimistic 4
+c = pessemistic 6
+m = most likely 5
+
+tE = (a + 4*m +c)/6 --> (6 standard deviations in normal distribution)
+
+
+
+
+
+

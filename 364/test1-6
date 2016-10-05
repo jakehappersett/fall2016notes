@@ -1,0 +1,54 @@
+***relational algerbra operators***
+
+- SELECT
+	output the rows of relation X that satisfy the specified condition
+		--> output rows
+		--> can select "all" "only" 
+
+- PROJECT 
+	output the values of the attributelist for all rows of relation X
+		--> output columns
+		--> removes duplicate rows
+
+- JOIN 
+	join rows from one relation to another 
+		--> inner join
+		--> outer join 
+
+- UNION
+	combindes all rows from two tables excluding duplicate rows
+		--> both tables have to be the same with different values
+
+- INTERSETCT
+	tables must be "UNION" compatible
+	outpust only those rows that exist in both tables
+
+- DIFFERENCE 
+	outputs only rows if the first table that do not exist in the second table 
+
+- PRODUCT
+	combines each row in the first table with every row in the second table
+	
+
+** JOIN SHIT** tables do not have to be union compatible
+
+
+- INNER JOIN 
+	--> natural join 	
+		selects only rows with common values in the join attributes
+		eliminates duplicate columns
+		eliminates duplicate rows
+		does not include unmatched pairs
+	--> EQUI - JOIN 
+		joins two relations by selecting only rows with common values for the join attributes
+		eliminates duplicate rows
+		does not include unmatched pairs
+	--> Theta JOIN
+		uses a comparison operator > < <= etc..
+
+- OUTER JOIN
+	--> RIGHT OUTER JOIN
+		similar to inner join but includes the rows with null values on left 
+	--> LEFT OUTER JOIN
+		same as right, but null values are on the right
+

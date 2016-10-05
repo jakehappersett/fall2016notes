@@ -1,0 +1,101 @@
+**network layer** : route packet to proper subnet (routing)
+
+- vlan
+	virtual local area network
+	allows users in physically differnt locations ot communicate as if they were on a single LAN
+	can logically rearrange nodes without moving cables 
+	computers on one vlan cannot see computers on another even if they are physically connected
+
+- difference between MAC address and IP address
+	MAC address is within a network
+		--> MAC header changes at each router 
+	IP address remains the same at each router 	
+	
+	eachj port on the router has its own MAC address 
+
+- protocol overview
+	most common protocol is IP 
+		--> 75%
+	ipsec : internet protocol security
+		--> protocol suite for securing IP protocol communicatiosn by authenticating and encrypting communication sessions
+		--> functionality included in IPV6
+	IGMP : internet group managmenet protocol
+		--> used for multicasting
+	ICMP : internet control message protocol 
+		is used to suppoer netowrk management commands such as the ping command 
+
+- IP address
+	32 bits grouped in octets (binary)
+		--> converted into decimal numbers 
+		
+	unlike MAC address IP addresses are assigned by network administrators (usually using DHCP)
+		--> static IP doesn't change (printer, website, server) 
+		--> Dynamic host configuration
+			pool of IP addresses that can assign
+			"IP leased for a specific ammount of time" 
+
+- DHCP 
+	dynamic host ocnfiguratipon protocol
+	application layer protocol for automatic assingment of IP addresses in an organizations network
+
+- dotted decimal notaion
+	32 bit addresses broken into 4 blocks of 8 bits each 
+	each block converted to decimal representation
+
+- IP address structure
+	broken into two parts 
+		--> (sub)network portion
+			also called the organizational part
+			ususally associated with the ISP (or large organization like university [vcu's is 172.23]
+		--> host portion 
+			identifies the host within the network
+			usually broken further into subnets
+				> subnet ID
+				> Host ID 
+	subnet mastk tells where the IP is broken into these parts
+	subnet mask HAS to go with IP address
+
+- IP address classification
+	classful
+		--> dont use anymore
+		--> fixed length subnet mask
+		--> network parts were identified into 5 address classes
+			in practice allowed three possible network sites 
+				> Class A takes first octet for network, last 3 for hosts
+				> class B takes first two octets for network , last 2 for hosts 
+				> etc etc etc 
+			255 numbers possible in one class
+
+	**class A networks: **
+		first octet is in the range 0 - 127
+		7 bits in network id
+		address starts with 0 (ranging from 00000000 - 01111111) so 128 possible class A netowrks
+			--> actually only 126 because 127 and 10 are both reserved
+				> 127(.0.0.1) for loopback (check to see if stack is working)
+				> 10 for private IP addresses 
+		so first bit can be looked at to see if it is a classful network  
+		next 24 bits are host addresses so each network has 2^24 = 16,777,216 IP 
+		default subnet mask : 255.0.0.0
+			--> 255 means "turn on" all 8 bits in the first octet and none in the other octets 
+				> remember that shit above about 255 nubmers in one class 
+
+	**class B networks: ** 
+		first two bits are "10"
+			--> (second bit is 0)
+		first octet ranges are from 128 - 191 (ranges from 1000000 - 10111111)
+		default subnet mask : 255.255.0.0
+		14 bits for network id (not 16)
+		16 bits for host address in each network 
+		private class B addresses are 172.16.0.0 - 172.31.255.255 and a subnet mask 255.240.0.0
+ 
+	**class c networks: **
+		first three bits are "110" 
+		first octet ranges are 192-223 or 11000000-11011111
+		default subnet mask : 255.255.255.0
+		21 bits for network ID 
+		8 bits for host address in each network
+		pricate class c addresses are 192.168.0.0 - 192.168.255.255 and subnet 255.255.0.0
+
+	classless : classless Inter-domain routing
+		--> fixed length subnet mask
+	VLSM : variable length subnet mask

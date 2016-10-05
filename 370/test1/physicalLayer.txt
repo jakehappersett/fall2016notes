@@ -1,0 +1,133 @@
+*Physical Layer**
+
+- four physical layer components
+1 signaling method
+2 circuit configuration 
+3 transmission medium (wired, wireless)
+4 devices typically associated with the layer (repeaters multiplexers, modem, NIC, etc)
+
+- signals
+	data needs ot be converted into signals to be transmitted
+	used to represent bits
+		
+	physical layter interacts w/ nature
+		signal transmitting properties of chosen media are important 
+- copper wire 
+	in networking, 8 strands of wire are organized as four pairs
+		wires are twisted (greater number of twists, the higher the throughput) 
+		--> difference between CAT5 and CAT6 is number of twists per inch
+		--> range from cat1-8 8 being the highest throughput (40Gbps)
+- optical fiber
+	glass 
+	works on large volumes of data over long distances
+	weighs much less than copper
+	~ 1Tb/s
+	
+	types:
+		multiple mode : 
+			uses LED as light source
+			used on short links
+	
+		single mode: 
+			uses laser light source 
+			can transmit data over very long distances 
+			higher speed than multimode 
+- data vs signals
+	data
+		representation of facts in a formalized manner suitable for communication or processing by humans
+		ex. thoughts in humnas or numbers in computer spreadhseets
+	
+	signal
+		detectable transmitted energy that can be used to carry information 
+
+- signals
+	changes in energy that can be detected at the reciever
+	good signals provide
+		> easy detection by reciever
+		> immunity from noise
+		> efficient use of bandwidth
+		> multiplexing
+
+	impacts of improved signaling:
+		> easy reception
+			newer signaling schemes require less transmission power to send detectable signals and can ve smaller
+		> noise resistance
+			ex fm has better noise resistance than am 
+		> efficient utilization of bandwidth
+			data compression improved signaling
+		> multiplexing 
+			radio tv cell phones fire police wifi and other users can easily transmit signals over the same space 
+
+	categories of signals
+		> digital signal
+			descrete:
+			high - 1 
+			low  - 0
+		> analog signal
+			continuous 
+	
+	manchester encoding
+		> it's easy for a stream of 0s and 1s to get lost
+		> sending and recieving device need to be syncronized 
+		> done by establishing a time interval 
+			--> sent like : 0|0|0|0  ----> recieved like: 0   | 0|0  | 0
+			--> called clock slippage
+		> manchester encoding embeds times into signal
+			--> instead of 0 = -5V, 1 = +5V
+			--> 1 = -5V to +5V, 0 = +5V to -5V
+			--> watch them videos
+
+	Analog signals
+		> still use manchester encoding
+		> sine waves: (amplitude, frequency, phase) 
+			AM : amplitude modulation 
+				height of wave
+			FM : frequency modulation
+				num of waves over time
+			PM : phase modulation
+				efficient takes more bandwidth
+				requires 3d view of wave (quadrant shit)
+			QAM : quadrature amplitude modulation
+				combindes am and pm, uses modems
+				used in tv, wifi	
+
+				adds the standard (01) with: 
+				q1 : 11
+				q2 : 00
+				q3 : 01 
+				q4 : 10 
+			OFDM : orthadical frequency design modification
+				used in wifi
+				comvindes FM and PM 
+
+	Transmission impairments
+		> attenuation : loss of signal 
+		> distortion delay : signals travel at different speeds 
+		> noise : crosstalk 
+		> dispersion : signal disperses into sepperate wavelengths
+
+- Multiplexing
+	also known as muxing
+	sending multiple signals simultaneously on the sma emedium
+		>ex. radio station
+	IMPORTANT milestone in data communication
+
+	LAYER 1 ACTIVITY
+
+	
+- duplex 
+	two connected parties
+-half-duplex
+	walkee talkee
+-full-duplex 
+	telephone
+- simplex 
+	one way communication
+
+- bandwidth 
+	measure of available or comsumed data communcation resources expressed in bits
+- bit rate
+	number of bits that are conveyted per unit of time
+- channel capacity 
+	upperbound on the amoun of data tha can be reliably transmitted over a communications channel
+	

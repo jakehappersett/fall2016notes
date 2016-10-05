@@ -1,0 +1,20 @@
+
+- SPanning tree protocol
+	inteligently blocks ports so traffic doesn't loop on switch
+		--> one switch becomes "root bridge"
+			>> all traffic flows through this bridge
+		--> each other switch chooses wat to get to root bridge
+			>> closes off other ports (still up, just not listening)
+		--> physical redundancy remains, logical redundancy is elimintted
+	
+- switching or bridge loop
+	occurs when there is more than one layer 3 path
+		--> loops indefinitely 
+
+- shortest path bridge
+	similar to spanning tree, but uses more intelligent algorithm to make decisions
+	"open shortest path first" 
+		--> picks topology that is most efficient
+
+
+

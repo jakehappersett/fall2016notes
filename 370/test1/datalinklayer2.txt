@@ -1,0 +1,16 @@
+**Redundancy checks**
+
+- logitudinal redundancy check (LRC)
+	organized data into a table to create a parity for each column
+
+- parity or vertical redundancy check
+	append a single bit (0 or 1) at the end of data block so that the number of ones is even 
+
+>>>> these two can be combined to allow for error connection 
+
+
+- CRC-32
+	only does error detection
+	the probability of detecting a random error increases as the width of the checksum. 
+	a 32-bit checksum can detect 99.9% of random errors
+		> if it detects error, asks to correct error

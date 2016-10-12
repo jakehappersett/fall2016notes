@@ -67,7 +67,7 @@
 			255 numbers possible in one class
 
 	**class A networks: **
-		first octet is in the range 0 - 127
+		**first octet is in the range 0 - 127
 		7 bits in network id
 		address starts with 0 (ranging from 00000000 - 01111111) so 128 possible class A netowrks
 			--> actually only 126 because 127 and 10 are both reserved
@@ -82,7 +82,7 @@
 	**class B networks: ** 
 		first two bits are "10"
 			--> (second bit is 0)
-		first octet ranges are from 128 - 191 (ranges from 1000000 - 10111111)
+		**first octet ranges are from 128 - 191 (ranges from 1000000 - 10111111)
 		default subnet mask : 255.255.0.0
 		14 bits for network id (not 16)
 		16 bits for host address in each network 
@@ -90,7 +90,7 @@
  
 	**class c networks: **
 		first three bits are "110" 
-		first octet ranges are 192-223 or 11000000-11011111
+		**first octet ranges are 192-223 or 11000000-11011111
 		default subnet mask : 255.255.255.0
 		21 bits for network ID 
 		8 bits for host address in each network
@@ -99,3 +99,42 @@
 	classless : classless Inter-domain routing
 		--> fixed length subnet mask
 	VLSM : variable length subnet mask
+		
+- classless inter domain routing
+	eliminated the classful address classification
+	class is no longer uniquely identifiable from the first few bits
+	now it is:
+		xxx.xxx.xxx.xxx/n 
+			--> n number of bits that are used for network part of address 
+	allows us to vary the length of the IP address regardless of what the default class of the IP might have been
+
+		 (ex) 
+		128.172.0.0/16
+		
+		128.172 (are 16 bits all part of network portion)
+			(could also say 255.255.0.0)
+
+
+- subnet shit
+	number of subnets = 2^n - 2 
+		--> n = # of bits 
+		--> -2 because you can't use all '0' or all '1'
+
+	number of hosts = 2^h - 2 
+		--> h = # bits for hosts 
+		--> -2 because all '0' or all '1' 
+	
+	128.172.10.0/24 -> gets to vcu
+
+	128.172.10._ _ _ | _ _ _ _ _  -> gets to vcu floor
+
+		--> for n [left side](use formula with subnets = 4)
+		--> for h [right side](use formula with  hosts = 5) 
+		--> first 3 identify floor
+		--> 255.255.255.(128)+(64)+(32) | (16)(8)(4)(2)(1)
+			>> 224 
+			>> 255.255.255.224 (subnet mask)
+	
+
+		
+-  

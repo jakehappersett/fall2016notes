@@ -1,0 +1,10 @@
+**Normalization**
+
+- Anomalies 
+	undesirable properties in the database which resulta fter a database tupe operation
+		--> tuple operations : INSERT MODIFY DELETE
+ 
+
+- INSERT anomaly
+	operation 
+		--> inser

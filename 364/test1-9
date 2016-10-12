@@ -1,0 +1,40 @@
+- lossless decomposition
+	join of subtables is the exact same as the original table
+- lossy 
+	if you join subtables the original table will be a subset of the joined table 
+--> to determine: 
+	1 look at common attribute between two 
+	2 if the common attribute is NOT a primary key for either table
+		>> lossy 
+	3 if common attribute is a primary key for either of teh two tables
+		>> lossless
+
+**it is not sufficient that a decomposition be lossless**
+** this is where normalization comes into play ** 
+
+- Determination
+	if a -> b (a determines b)
+		for a given value of attribute a there is a unique value of attribute b 
+	full functional dependancy : if attribute b is functiaonally dependent on determinant A but not on any subset of that determinant 
+	
+	rules for functional dependancy:
+
+		1 if a -> b and b -> c 
+			then a -> c 
+		2 if a,b,c, and a -> c then a,b -> c 
+		3 for {a,b,c,d,e},{a->b;b->d,a,b->e} then {a,b -> c,d,e}
+
+
+**normalization** process of decomposing complex unstable data into simple stable form :: series of steps
+- each step of normalization requires it be in the last steps form (4NF is also 3,2,&1NF)
+
+steps
+
+- first normal form 
+	a relation is in 1NF if all associated domains are simple 
+		--> thus if a relation has any multi-valued attribute it is not in 1NF
+- second normal form 
+	a relation is in 2NF if it is in 1NF and each non-prime attribute is fully functionally dependent on the relation key 
+- third normal form
+	a relation is in 3NF if it is in 2NF and there is no transitive dependancy (dependancy bewteen two non primary keys)
+	

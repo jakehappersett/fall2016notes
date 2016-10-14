@@ -11,17 +11,17 @@ class account
 	double interest = 0 ;
 	double bal = 0 ;
 
-	int display();
+	void display();
 	virtual int deposit(double d);
 	virtual int withdraw(double w);
 };
 
 
-int account::display()
+void account::display()
 {
 	//display
 	cout << endl;
-	cout << "avvount type: " << accountType << endl;
+	cout << "account type: " << accountType << endl;
 	cout << "account number: " << accountNum << endl;
 	cout << "interest: " << interest << '%' << endl;
 	cout << "balance: " << bal << endl;
@@ -64,8 +64,7 @@ class savings: public account
 	public:
 	savings()
 	{
-		accountType="savings";
-	}
+		accountType="savings"; }
 	void checkaccount()
 	{
 		if (bal >= 10000)
@@ -89,12 +88,14 @@ class savings: public account
 	{
 		account::deposit(d);
 		checkaccount();
+		return (0);
 
 	}
 	int withdraw(double w)
 	{
 		account::withdraw(w);
 		checkaccount(); 
+		return (0);
 	}
 };
 /*  CHEKCING SHIT */
@@ -122,12 +123,14 @@ class checking: public account
 	{
 		account::deposit(d);
 		checkaccount();
+		return (0);
 
 	}
 	int withdraw(double w)
 	{
 		account::withdraw(w);
 		checkaccount(); 
+		return (0);
 	}
 };
 
@@ -171,6 +174,7 @@ class cd: public account
 	{
 		account::deposit(d);
 		checkterm(t);
+		return (0);
 
 	}
 	int withdraw(double w, int i)
@@ -182,17 +186,21 @@ class cd: public account
 		}
 		account::withdraw(w);
 		checkterm(t);
+		return (0);
 	}
 };
 
 int main()
 {
 	savings mysave;
+	mysave.accountNum = "save";
 	mysave.deposit(10000); 
 	checking mycheck;
+	mycheck.accountNum = "check";
 	mycheck.deposit(600);
 	cd mycd(3);
 	mycd.deposit(10000);
+	mycd.accountNum = "cd";
 	mysave.display();
 	mycheck.display();
 	mycd.display();
@@ -200,6 +208,8 @@ int main()
 	mysave.compound(1);
 	//calculate monthly interest for the cd
 	mycd.compound(1);
+	mysave.display();
+	mycd.display();
 	//order checks
 	mycheck.orderChecks();
 	mycheck.withdraw(200);
@@ -209,7 +219,6 @@ int main()
 	mysave.display();
 	mycheck.display();
 	mycd.display();
-	
 	
 	//new savings
 //	account *mysave;

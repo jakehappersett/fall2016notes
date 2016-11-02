@@ -1,0 +1,24 @@
+ Functional Requirements:
+
+Your new and improved phonebook should provide the following functional capabilities:
+-The user should be allowed to enter up to 100  phone numbers entries where each entry contains a
+-Full Name
+-Home phone
+-Mobile Phone
+
+Your program should require the user to enter a full path filename of an existing or new phonebook; if existing ,  the all entries in the file should be read into the application. 
+-Your program should also allow the user add additional entries to the phonebook and, prior to exit, write them to the file.
+-When writing to the file  your program should ensure the entries are not duplicated.
+-Your program should allow the user to Display the phone book regardless of the number of entries,  presenting 5 at a time with a pause/continue step in between pages
+-Your program should check for duplicate entries and not add them to the phone book
+-Your program should keep track of the number of entries so to not overfill the phonebook
+Extra Credit:
+Your program should provide an option to search the phonebook by name and display all entries matching the search criteria.  Note: the user need only to provide a portion of the name and not the entire string.
+Hint: look up the string function strstr()
+
+ Program Requirements:
+Design and implement a proper object oriented program in C++ to support all of the above  functional  requirements.  
+You must use a array of pointers to store the phone book and new each phone book entry as it is entered or read from the file.
+Define class member data, constructors and member functions  as required to fulfill on the requirements.
+The program should use file streams to Read and Save the phonebook
+Entries should be written to the file in a structured, pipe delimited format.

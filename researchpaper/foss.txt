@@ -1,0 +1,43 @@
+implementing free and open source software in a business environment
+
+**broad outline**
+
+- introducing FOSS 
+	--> what does it stand for
+	--> how did it start
+	--> more about this 
+
+https://en.wikipedia.org/wiki/Unix_philosophy
+https://en.wikipedia.org/wiki/Ken_Thompson
+https://en.wikiquote.org/wiki/Dennis_Ritchie
+https://en.wikipedia.org/wiki/Douglas_McIlroy
+https://en.wikipedia.org/wiki/Brian_Kernighan
+https://en.wikipedia.org/wiki/POSIX
+https://en.wikipedia.org/wiki/Open_Software_Foundation
+https://en.wikipedia.org/wiki/X/Open
+https://en.wikipedia.org/wiki/The_Open_Group
+https://en.wikipedia.org/wiki/Single_UNIX_Specification
+https://en.wikipedia.org/wiki/Unix
+http://www.catb.org/~esr/writings/taoup/html/index.html
+http://www.catb.org/esr/writings/unix-koans/index.html
+
+- explaining what it is already used for that we don't realize
+	--> embedded hardware 
+	--> servers etc
+
+- how unix based systems will intregrate better with these technologies
+
+
+- potential economic impact of switching to FOSS
+	--> free (except support) 
+	--> calculate software costs of proprietary software
+
+http://radar.oreilly.com/2012/07/open-source-small-business-report.html
+
+
+- business reasons to implement these changes
+	--> security
+	--> open code base allows system to be rebuilt to perfectly suit busienss needs
+
+http://www.h-online.com/open/news/item/UK-Gov-to-switch-entirely-to-FOSS-1036574.html
+http://www.pcworld.com/article/209891/10_reasons_open_source_is_good_for_business.html

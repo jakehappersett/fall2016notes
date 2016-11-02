@@ -1,0 +1,84 @@
+		**transport layer**
+		   PDU == segment
+-----emphasis on transmission control protocol (TCP)-----
+
+- tcp functions 
+	segmentation
+	reliability
+	flow control
+	multiplexing
+	connection establishment
+
+- TCP 
+	connection oriented protocol
+		--> dialing a phone call (connection between two parties before there is any communicaiton)
+	larger header 
+	
+- UDP 
+	Connectionless
+		--> like US mail (no connection made before data is sent)
+	smaller header 
+		countains:
+		--> source port
+		--> destination port
+		--> length
+		--> checksum
+	used for: 
+		--> voip
+		--> streaming
+
+- transport layer services: 
+	**provides data to the application layer
+	transport layer can deal with segments and segmentation 
+	transport layer provides reliable service
+		--> guarantees that packets were not lost durring transmission
+		--> acknowledges that packets were recieved
+	transport layer can provide multiplexing
+		--> combindes port and ip addresses (socket) 
+			^ allows layer to distinguish between multiple applications sending it data 
+				(ie there is two google instances sending data to the MAC card)
+
+-host to host connection
+	 sending end
+		--> application layer creates the data to be sent
+	 recieving end
+		--> same shit but backwards
+
+- TCP functions
+	corrects possible imperfects of IP
+		- segmentation
+			 ip is limited to 64KB packets 
+			 if it has more than 64Kb to transfer it must segment the message
+				--> sometimes called datagrams
+				--> segment number is assigned to each segment
+					^ sequence number of the previous segment plus the length of the segment
+				--> sement number help the recieving host order out of order segments
+			advantages
+				--> less retransmission if error is introduced
+				--> easirt for routers to hold small segments if memory in OUTBOUND router is busy
+			disadvangates
+				--> more computations on both the sending and recieving ends
+
+		- reliability
+			includes detection and recovery from errors
+			basic mechanism
+				--> host recieves a segment thathas no error (checksum is correct)
+				--> the host sends a positive acknowledgment (ACK) to the sending host
+					***unlike the sequence number the ACK number is the NEXT number the revieber expects to recieve***
+				--> if the ACK is not revieved by the transmitting host, the sender retransmits the segment
+			segments may also get duplicated 
+				--> sequence numbers identify these duplicates so that tey can be eliminated
+			***sequence # == recovery
+			***ACK === detection
+			if a segment is damaged the reciever simply discards it, waits for the time out and the sender resends the segment
+		
+		- multiplexing
+			combinding two or more information channels onto a common transmission medium so that more than one applicatoin can be running over the same IP address
+			combindes the hosts IP address and a port address (makes a socket)
+			each source destination prot combination is unique so that you can have sever "destination" prots of "80" m
+
+
+		- flow control
+		
+		- connection establishment
+	

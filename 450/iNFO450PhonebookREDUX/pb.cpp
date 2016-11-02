@@ -15,6 +15,7 @@ public:
 	entry();
 	void setEntry(char fn[], char ln[], char num[]);
 	void display();
+	friend class phonebook;
 };
 
 entry::entry()
@@ -49,6 +50,8 @@ public:
 	int getcount();
 	void add( entry *e);
 	void show();
+	int save();
+	void setfilename(char f[]);
 };
 
 phonebook::phonebook()
@@ -72,9 +75,27 @@ void phonebook::add(entry *e)
 }
 void phonebook::show()
 {
+	for (int i=0; i < listnum; i++) {
+		pb[i]->display();
+	}
+}
+void phonebook::setfilename(char f[])
+{
+	strcpy(filename, f);
+}
+int phonebook::save()
+{
+	ofstream file(filename);
+	if (!file)
+	{
+		cout << "try again" << endl;
+		return -1;
+	}
 	for (int i=0; i < listnum; i++)
 	{
-		pb[i]->display();
+		file << pb[i]->firstname << ",";
+		file << pb[i]->lastname<< ",";
+		file << pb[i]->number<< "," << endl;
 	}
 }
 
@@ -86,12 +107,14 @@ void phonebook::show()
 /////////////////////////////////////////main//////////////////////////////////////
 int main()
 {
+	char filename[20];
 	entry *dude = new entry();
 	dude->setEntry("jake","happ","804");
-
 	phonebook *mypb = new phonebook();
+	mypb->setfilename("/home/jake/test.txt");
 	mypb->add(dude);
 	mypb->show();
+	mypb->save();
 	
 	return 0; 
 }

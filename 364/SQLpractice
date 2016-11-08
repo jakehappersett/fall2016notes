@@ -1,0 +1,63 @@
+from slideshow: 
+
+1 SELECT A*
+	FROM Author
+	WHERE AU_DOB > '18-Jan-1976'
+
+2 SELECT AU_NAME AND AU_DOB
+	FROM Author
+
+3 SELECT NAME AU_DOB
+	FROM AUTHOR
+	WHERE AUDOB > '18-Jan-1976'
+
+4 SELECT bk+title, bk_list_price, pb_name
+FROM book b, publisher p
+WHERE b.PBID = P.PBID
+
+5 "        " 
+
+AND bk_list_price > 200
+
+6 SELECT bk_title, bik_list_[price, pb_name, Au_name
+FROM book b, publisher p, author, a 
+WHERE b.pbid = p.pbid
+AND p.pbid = a.auid
+AND list_price > 200
+
+7 SELECT id name city state zipcode 
+FROM book b, publisher p
+WHERE b.bpid=p.pbid
+bprice in (SELECT btable price > 200)
+
+8 SELECT count(*), MIN(BK_LIST_PRICE), AVG(BK_LIST_PRICE), MAX(BK_LIST_PRICE)
+FROM BOOK
+
+9 SELECT PB_NAME, MAX(BK_LIST_PRICE), AVG(BK_LIST_PRICE) AS Total_price, MIN(BK_LIST_PRICE) 
+FROM Book b, Publisher P 
+WHERE b.PBID = p.PBID
+
+10 SELECT COUNT(*) 
+FROM Book b, Publisher p
+WHERE b.PBID = p.PBID
+AND bk_list_price  IN (SELECT bk_list_price FROM book WHERE bk_list_price > 200)
+
+11 SELECT COUNT(*) 
+FROM Book b, Publisher p
+WHERE b.PBID = p.PBID
+AND bk_list_price NOT IN (SELECT bk_list_price FROM book WHERE bk_list_price > 200)
+
+****NOT IN ^^^*****
+
+11 SELECT COUNT(*) 
+FROM Book b, Publisher p
+WHERE b.PBID = p.PBID
+AND bk_list_price > 200,
+AND bk_list_price NOT IN (SELECT bk_list_price FROM book WHERE bk_list_price < 200)
+
+
+**********************************************************************************************************
+
+ORDER BY -- default ascending 
+- change to descending (DESC)
+

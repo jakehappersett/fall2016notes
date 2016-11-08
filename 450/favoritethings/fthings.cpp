@@ -56,8 +56,7 @@ void beer::display()
 	printf("Brewery: %s  Beer: %s Type: ", brewery, beername);
 	switch (beertype)
 	{
-	case LAGER:
-		cout << "Lager" << endl;
+	case LAGER: cout << "Lager" << endl;
 		break;
 	case STOUT:
 		cout << "Stout" << endl;
@@ -97,8 +96,7 @@ beerlist::beerlist()
 	beerCount = 0;
 }
 
-beerlist::~beerlist()
-{
+beerlist::~beerlist() {
 	delete mylist;
 }
 
@@ -140,9 +138,7 @@ int beerlist::saveList()
 		output << mylist[i]->beername<< ",";
 		output << mylist[i]->beertype<< ",";
 		output << mylist[i]->rating<< ",";
-		output << mylist[i]->alchoholContent << endl;
-	}
-	output.close();
+		output << mylist[i]->alchoholContent << endl; } output.close();
 	return 0;
 	
 }

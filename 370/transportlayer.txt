@@ -29,6 +29,7 @@
 
 - transport layer services: 
 	**provides data to the application layer
+	** 16 bit checksum (data link layer checksum is 32)**
 	transport layer can deal with segments and segmentation 
 	transport layer provides reliable service
 		--> guarantees that packets were not lost durring transmission
@@ -47,6 +48,7 @@
 - TCP functions
 	corrects possible imperfects of IP
 		- segmentation
+			***sequence # == recovery
 			 ip is limited to 64KB packets 
 			 if it has more than 64Kb to transfer it must segment the message
 				--> sometimes called datagrams
@@ -60,6 +62,7 @@
 				--> more computations on both the sending and recieving ends
 
 		- reliability
+			***ACK === detection
 			includes detection and recovery from errors
 			basic mechanism
 				--> host recieves a segment thathas no error (checksum is correct)
@@ -68,17 +71,48 @@
 				--> if the ACK is not revieved by the transmitting host, the sender retransmits the segment
 			segments may also get duplicated 
 				--> sequence numbers identify these duplicates so that tey can be eliminated
-			***sequence # == recovery
-			***ACK === detection
 			if a segment is damaged the reciever simply discards it, waits for the time out and the sender resends the segment
 		
 		- multiplexing
 			combinding two or more information channels onto a common transmission medium so that more than one applicatoin can be running over the same IP address
-			combindes the hosts IP address and a port address (makes a socket)
+			combindes the hosts IP address and a port address (makes a SOCKET) 
+			socket is combination of host ip address and port address, as well as server ip and port address
 			each source destination prot combination is unique so that you can have sever "destination" prots of "80" m
+			**know common TCP ports (except 45)
+			80 : web http
+			25: email smtp
+			443 : SSL https
+			22 : ssh
+			23 : telnet
+			110 : POP3
 
+			161 : SNMP simple network managment protocol
+			69 : TFTP Tricial File Transport
+
+			67 : client DHCP v4 Dynamic host control
+			546 : client DHCP v6 dynamic host control
 
 		- flow control
+			without flow control buffers are overwhelmed and segment must be retransmitted
+			control of the rate at which adata rare dransmitted to accommodate the revievers limitations 
+			if the revieving nod e is slow it will not be able to preocess the segment
+			**the reciever controls the rate of transmission
+			
+			types:
+				--> stop and wait
+					waits for ACK before sending next segment (slow)
+				--> windowing 
+					indicates how many bytes of data the sender cna transmit before recieving another ACK 
+				--> sliding window
+					only with UDP
+					same as windowing but does it dynamically :: size of window can vary
 		
 		- connection establishment
-	
+			sequence numbers are a core part of TCP
+			connection is revcieved using: 
+			------------------> 3 way handshake
+				--> only for TCP
+				1 sender transmits a TCP segment with the synchronization bit set (SYN=1) objective is to negotiate the sequence number
+				2 revcipient responds to the TCP segment with both the SYN and ACK bits set
+				3 sender responds with ACK
+

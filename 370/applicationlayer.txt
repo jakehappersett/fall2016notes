@@ -1,0 +1,21 @@
+****application layer****
+
+- unlike lower layers each supported end user class of a[pplications has a different application layer protocl associated with it 
+	ex http for web smtp for email
+
+- RFC 1123 defined the operation of an initial set of applicaiton layer protocols
+	SMTP 
+	Telnet
+	FTP
+
+- DHCP (dynamic host conifugration protocol)
+	like NAPT used to deal iwth the shortage of IP addresses
+
+- NTP : network time protocol
+	synchronize the clocks of computer systems over packet switched networks 
+	
+
+REMOTE COMMUNICATION PROTOCOLS
+- IM instant messaging
+	text based communication 
+	

@@ -1,0 +1,25 @@
+field used for subnetting : 48-64 bit on networking side
+proper abbreviations (condensing the ipv6)
+ey64 (way for it to construct ip address) ? 
+
+transport layer
+( 5 things to do with tcp ) 
+sequencing 
+awk : expecting
+multiplexing
+windowing (dynamic windowing)
+3 way handshake
+
+wildcard (to prevent ip addresses from being recongnized) 
+ - know how to determine what th ewild card is 
+ - take subnet mask and subtract from 255.255.255.255
+
+TCP vs UDP 
+
+know port addresses
+
+know application layer abreviations ( ex SMTP simple mail transfer protocol ) 
+
+
+
+
